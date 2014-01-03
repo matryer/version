@@ -56,12 +56,12 @@ Use backticks to get the current version and use it in another command:
 
 To use the version multiple times, use variables:
 
-    VERSION=`version ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
+    VERSION=`version -n ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
 
 #### Releasing in GitHub
 
     # increase the version and keep it in the VERSION variable
-    VERSION=`version ./ +`
+    VERSION=`version -n ./ +`
 
     # Tag the new release
     git tag -a `echo $VERSION` -m "Release $VERSION"
