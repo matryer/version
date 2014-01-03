@@ -104,3 +104,13 @@ We built Version so we could write scripts that managed our GitHub releases, so 
     git push --tags
     
     echo "Finished"
+
+## Development
+
+Version is a Go package that you are welcome to use in your own projects.
+
+To get started, go get the package:
+
+    go get github.com/stretchr/version
+    
+Then you may use the `version.Version` object in your own programs.
