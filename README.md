@@ -7,20 +7,20 @@ Perfect for:
   * Automated build/release scripts
   * Integration with GitHub tags
 
-### Download
+## Download
 
-#### v1.0.0
+### v1.0.0
+  * [Version v1.0.0 for darwin 386](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-386.tar)
+  * [Version v1.0.0 for darwin amd64](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-amd64.tar)
+  * [Version v1.0.0 for freebsd 386](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-386.tar)
+  * [Version v1.0.0 for freebsd amd64](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-amd64.tar)
+  * [Version v1.0.0 for freebsd arm](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-arm.tar)
+  * [Version v1.0.0 for linux 386](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-386.tar)
+  * [Version v1.0.0 for linux amd64](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-amd64.tar)
+  * [Version v1.0.0 for linux arm](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-arm.tar)
+  * [Version v1.0.0 for windows 386](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-386.tar)
+  * [Version v1.0.0 for windows amd64](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-amd64.tar)
 
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-386.tar](Version v1.0.0 for darwin 386)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-amd64.tar](Version v1.0.0 for darwin amd64)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-386.tar](Version v1.0.0 for freebsd 386)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-amd64.tar](Version v1.0.0 for freebsd amd64)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-arm.tar](Version v1.0.0 for freebsd arm)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-386.tar](Version v1.0.0 for linux 386)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-amd64.tar](Version v1.0.0 for linux amd64)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-arm.tar](Version v1.0.0 for linux arm)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-386.tar](Version v1.0.0 for windows 386)
-  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-amd64.tar](Version v1.0.0 for windows amd64)
 
 ### Command line
 
