@@ -9,7 +9,7 @@ Perfect for:
 
 ## Download
 
-### v1.0.0
+Pick one that matches your machine:
 
   * Version v1.0.0 for darwin 386 - [version-v1.0.0-darwin-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-386.tar)
   * Version v1.0.0 for darwin amd64 - [version-v1.0.0-darwin-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-amd64.tar)
@@ -21,6 +21,8 @@ Perfect for:
   * Version v1.0.0 for linux arm - [version-v1.0.0-linux-arm.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-arm.tar)
   * Version v1.0.0 for windows 386 - [version-v1.0.0-windows-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-386.tar)
   * Version v1.0.0 for windows amd64 - [version-v1.0.0-windows-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-amd64.tar)
+
+Place it into your `/usr/bin` directory or equivalent.
 
 ### Command line
 
