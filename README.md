@@ -49,16 +49,33 @@ Place it into your `/usr/bin` directory or equivalent.
 Use backticks to get the current version and use it in another command:
 
     echo `version ./`
+    = v1.0.0
 
-... or increase the build version at the same time as getting it:
+Or get the version of another directory:
 
-    echo `version ./ +`
+    version /path/to/directory
+    = v2.3.1
+
+Remove the linefeed using the `-n` flag:
+
+    echo `version -n ./`
+
+Increase the build version at the same time as getting it using the `+` option:
+
+    echo `version -n ./ +`
+
+If you find reading `v1.0.0` annoying like we do, use the `-short` flag to give you the shortest possible representation:
+
+    version -short ./
+    = v1
 
 To use the version multiple times, use variables:
 
     VERSION=`version -n ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
 
 #### Releasing in GitHub
+
+We built Version so we could write scripts that managed our GitHub releases, so it allows you to do things like this:
 
     echo "Last version:" `version ./`
 
