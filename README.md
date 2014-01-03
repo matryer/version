@@ -1,11 +1,18 @@
 # Version
 
-Command line tool (and Go package) for keeping track of the versions of projects or directories.  Version creates and maintains a `.version` file in the directory containing the current version number, and provides a command line tool to easily get, and update the version number.
+Command line tool (and [Go package](#development)) for keeping track of the versions of projects or directories.  Version creates and maintains a `.version` file in the directory containing the current version number, and provides a command line tool to easily get, and update the version number.
 
 Perfect for:
 
   * Automated build/release scripts
   * Integration with GitHub tags
+
+#### Smart jumping
+
+Version increases numbers in a smart way, so if you increase the major version number it will automatically reset the minor and build numbers, like this:
+
+  * `v1.2.3` will jump to `v1.3.0` if you increase the minor build number
+  * `v1.2.3` will jump to `v2.0.0` if you increase the major build number
 
 ### Command line
 
@@ -26,13 +33,6 @@ The `version` command line has the following syntax:
   * `-n` - Suppress the linefeed at the end of the output
   * `-v=false` - Do not print the v prefix
   * `-short` - Print the shortest possible representation of the version number, i.e. instead of `v1.0.0`, it will just output `v1`.
-
-#### Smart jumping
-
-Version increases numbers in a smart way, so if you increase the major version number it will automatically reset the minor and build numbers, like this:
-
-  * `v1.2.3` will jump to `v1.3.0` if you increase the minor build number
-  * `v1.2.3` will jump to `v2.0.0` if you increase the major build number
 
 ### Download
 
@@ -88,9 +88,9 @@ We built Version so we could write scripts that managed our GitHub releases, so 
 
     # increase the version and keep it in the VERSION variable
     VERSION=`version -n ./ +`
-    
+
     echo "New version: $VERSION"
-    
+
     # get the human-readable version number
     SHORTVERSION=`version -short -n ./`
 
@@ -109,7 +109,7 @@ We built Version so we could write scripts that managed our GitHub releases, so 
     # push changes and tags
     git push origin master
     git push --tags
-    
+
     echo "Finished"
 
 ## Development
@@ -119,7 +119,7 @@ Version is a Go package that you are welcome to use in your own projects.
 To get started, go get the package:
 
     go get github.com/stretchr/version
-    
+
 Then you may use the `version.Version` object in your own programs.
 
   * Check out the [complete API documentation](http://godoc.org/github.com/stretchr/version) for details.
