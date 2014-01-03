@@ -16,7 +16,7 @@ for PLATFORM in $PLATFORMS; do
   OUTPUT=`echo $@ | sed 's/\.go//'`
   CMD="go-${GOOS}-${GOARCH} build -o releases/$VERSION/$PLATFORM/version $@"
   TARNAME="version-$VERSION-$GOOS-$GOARCH.tar"
-  echo "  * [Version $VERSION for $GOOS $GOARCH](https://github.com/stretchr/version/releases/download/$VERSION/$TARNAME)"
+  echo "  * [Version $VERSION for $GOOS $GOARCH - $TARNAME](https://github.com/stretchr/version/releases/download/$VERSION/$TARNAME)"
   $CMD || FAILURES="$FAILURES $PLATFORM"
 
   # archive it too
