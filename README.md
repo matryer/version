@@ -87,7 +87,3 @@ To use the version multiple times, use variables:
     git push --tags
     
     echo "Finished"
-
-The above script will increase the build number, tag the repo with that version, commit the updated `.version` file and push it to the server.  Remember, you can do it in one line using a semi-colon `;` separator like this;
-
-    VERSION=`version ./ +`; git tag -a `echo $VERSION` -m "Release $VERSION"; git commit .version -m "Updated version"; git push origin master; git push --tags
