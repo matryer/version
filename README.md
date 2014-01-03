@@ -27,6 +27,13 @@ The `version` command line has the following syntax:
   * `-v=false` - Do not print the v prefix
   * `-short` - Print the shortest possible representation of the version number, i.e. instead of `v1.0.0`, it will just output `v1`.
 
+#### Smart jumping
+
+Version increases numbers in a smart way, so if you increase the major version number it will automatically reset the minor and build numbers, like this:
+
+  * `v1.2.3` will jump to `v1.3.0` if you increase the minor build number
+  * `v1.2.3` will jump to `v2.0.0` if you increase the major build number
+
 ### Download
 
 Pick one that matches your machine:
