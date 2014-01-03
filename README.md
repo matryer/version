@@ -34,7 +34,7 @@ To use the version multiple times, use variables:
 
     VERSION=`version ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
     
-#### Tagging in GitHub
+#### Releasing in GitHub
 
     # increase the version and keep it in the VERSION variable
     VERSION=`version ./ +`
