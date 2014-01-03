@@ -32,7 +32,7 @@ Use backticks to get the current version and use it in another command:
 
 To use the version multiple times, use variables:    
 
-    VERSION=`./version ./ +`; echo $VERSION
+    VERSION=`version ./ +`; echo $VERSION
     
 #### Tagging in GitHub
 
