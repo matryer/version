@@ -34,8 +34,21 @@ To use the version multiple times, use variables:
 
     VERSION=`version ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
     
-#### Tagging in GitHub
+#### Releasing in GitHub
 
-    VERSION=`version ./ +`; git tag -a `echo $VERSION` -m "Release $VERSION"; git push --tags
+    # increase the version and keep it in the VERSION variable
+    VERSION=`version ./ +`
     
-The above script will increase the build number, tag the repo with that version and push it to the server.
+    # Tag the new release
+    git tag -a `echo $VERSION` -m "Release $VERSION"
+    
+    # Commit the new .version file, since it's changed
+    git commit .version -m "Updated version"
+    
+    # push changes and tags
+    git push origin master
+    git push --tags
+    
+The above script will increase the build number, tag the repo with that version, commit the updated `.version` file and push it to the server.  Remember, you can do it in one line using a semi-colon `;` separator like this;
+
+    VERSION=`version ./ +`; git tag -a `echo $VERSION` -m "Release $VERSION"; git commit .version -m "Updated version"; git push origin master; git push --tags
