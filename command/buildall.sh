@@ -4,6 +4,7 @@ source $GOROOT/golang-crosscompile/crosscompile.bash
 
 PLATFORMS="darwin/386 darwin/amd64 freebsd/386 freebsd/amd64 freebsd/arm linux/386 linux/amd64 linux/arm windows/386 windows/amd64"
 VERSION=`version ../`
+SMALLVERSION=`version -short ../`
 
 mkdir -p releases/$VERSION/archives
 
@@ -15,8 +16,8 @@ for PLATFORM in $PLATFORMS; do
   GOARCH=${PLATFORM#*/}
   OUTPUT=`echo $@ | sed 's/\.go//'`
   CMD="go-${GOOS}-${GOARCH} build -o releases/$VERSION/$PLATFORM/version $@"
-  TARNAME="version-$VERSION-$GOOS-$GOARCH.tar"
-  echo "  * Version $VERSION for $GOOS $GOARCH - [$TARNAME](https://github.com/stretchr/version/releases/download/$VERSION/$TARNAME)"
+  TARNAME="version-$SMALLVERSION-$GOOS-$GOARCH.tar"
+  echo "  * Version $SMALLVERSION for $GOOS $GOARCH - [$TARNAME](https://github.com/stretchr/version/releases/download/$VERSION/$TARNAME)"
   $CMD || FAILURES="$FAILURES $PLATFORM"
 
   # archive it too

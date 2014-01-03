@@ -31,17 +31,16 @@ The `version` command line has the following syntax:
 
 Pick one that matches your machine:
 
-  * Version v1.0.0 for darwin 386 - [version-v1.0.0-darwin-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-386.tar)
-  * Version v1.0.0 for darwin amd64 - [version-v1.0.0-darwin-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-amd64.tar)
-  * Version v1.0.0 for freebsd 386 - [version-v1.0.0-freebsd-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-386.tar)
-  * Version v1.0.0 for freebsd amd64 - [version-v1.0.0-freebsd-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-amd64.tar)
-  * Version v1.0.0 for freebsd arm - [version-v1.0.0-freebsd-arm.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-arm.tar)
-  * Version v1.0.0 for linux 386 - [version-v1.0.0-linux-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-386.tar)
-  * Version v1.0.0 for linux amd64 - [version-v1.0.0-linux-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-amd64.tar)
-  * Version v1.0.0 for linux arm - [version-v1.0.0-linux-arm.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-arm.tar)
-  * Version v1.0.0 for windows 386 - [version-v1.0.0-windows-386.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-386.tar)
-  * Version v1.0.0 for windows amd64 - [version-v1.0.0-windows-amd64.tar](https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-amd64.tar)
-  * Or check out [all releases](https://github.com/stretchr/version/releases)
+  * Version v1.1 for darwin 386 - [version-v1.1-darwin-386.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-darwin-386.tar)
+  * Version v1.1 for darwin amd64 - [version-v1.1-darwin-amd64.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-darwin-amd64.tar)
+  * Version v1.1 for freebsd 386 - [version-v1.1-freebsd-386.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-freebsd-386.tar)
+  * Version v1.1 for freebsd amd64 - [version-v1.1-freebsd-amd64.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-freebsd-amd64.tar)
+  * Version v1.1 for freebsd arm - [version-v1.1-freebsd-arm.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-freebsd-arm.tar)
+  * Version v1.1 for linux 386 - [version-v1.1-linux-386.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-linux-386.tar)
+  * Version v1.1 for linux amd64 - [version-v1.1-linux-amd64.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-linux-amd64.tar)
+  * Version v1.1 for linux arm - [version-v1.1-linux-arm.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-linux-arm.tar)
+  * Version v1.1 for windows 386 - [version-v1.1-windows-386.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-windows-386.tar)
+  * Version v1.1 for windows amd64 - [version-v1.1-windows-amd64.tar](https://github.com/stretchr/version/releases/download/v1.1.0/version-v1.1-windows-amd64.tar)
 
 Place it into your `/usr/bin` directory or equivalent.
 
