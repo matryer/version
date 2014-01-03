@@ -60,18 +60,33 @@ To use the version multiple times, use variables:
 
 #### Releasing in GitHub
 
+    echo "Last version:" `version ./`
+
     # increase the version and keep it in the VERSION variable
     VERSION=`version -n ./ +`
+    
+    echo "New version: $VERSION"
+    
+    # get the human-readable version number
+    SHORTVERSION=`version -short -n ./`
+
+    echo "Tagging release..."
 
     # Tag the new release
-    git tag -a `echo $VERSION` -m "Release $VERSION"
+    git tag -a `echo $VERSION` -m "Release SHORTVERSION"
+
+    echo "Updating version file..."
 
     # Commit the new .version file, since it's changed
-    git commit .version -m "Updated version"
+    git commit .version -m "Updated to version $SHORTVERSION"
+
+    echo "Pushing changes..."
 
     # push changes and tags
     git push origin master
     git push --tags
+    
+    echo "Finished"
 
 The above script will increase the build number, tag the repo with that version, commit the updated `.version` file and push it to the server.  Remember, you can do it in one line using a semi-colon `;` separator like this;
 
