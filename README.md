@@ -114,3 +114,5 @@ To get started, go get the package:
     go get github.com/stretchr/version
     
 Then you may use the `version.Version` object in your own programs.
+
+  * Check out the [complete API documentation](http://godoc.org/github.com/stretchr/version) for details.
