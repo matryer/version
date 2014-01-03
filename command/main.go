@@ -1,10 +1,12 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"github.com/stretchr/version"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 /*
@@ -19,19 +21,26 @@ import (
 
   Usage:
 
-    version /path       - Reads the current version, or outputs
-                           v0.0.0 if none is set.
+		Getting versions:
 
-    version /path 1.0    - Sets the new version number to 1.0
+	    version /path       	- Reads the current version, or outputs
+	                          	v0.0.0 if none is set.
 
-    version /path +      - Increases the build version number
-                           so v1.2.3 becomes v1.2.4
+			version -short /path	-	Gets smallest possible version number.
 
-    version /path ++     - Increases the minor build number
-                           so v1.2.3 becomes v1.3.0
 
-    version /path +++    - Increases the major build number
-                           so v1.2.3 becomes v2.0.0
+		Changing versions:
+
+	    version /path 1.0    	- Sets the new version number to 1.0
+
+	    version /path +      	- Increases the build version number
+	                         	  so v1.2.3 becomes v1.2.4
+
+	    version /path ++     	- Increases the minor build number
+	                         	  so v1.2.3 becomes v1.3.0
+
+	    version /path +++    	- Increases the major build number
+	                         	  so v1.2.3 becomes v2.0.0
 
 */
 
@@ -39,20 +48,38 @@ const (
 	ExitCodeBadArgs = 1
 )
 
+// flags
+var (
+	shortFormat      = flag.Bool("short", false, "Whether the shortest possible version number should be output.  E.g. instead of v1.0.0, you'd just get v1.")
+	includeV         = flag.Bool("v", true, "Whether to include the v (for version) prefix in the output or not.")
+	suppressLinefeed = flag.Bool("n", false, "Whether to suppress the linefeed at the end of the output or not.")
+)
+
 func main() {
+
+	// parse the flags
+	flag.Parse()
 
 	var err error
 	var dir string
 	var option string
 
-	switch len(os.Args) {
+	// get non-flag arguments
+	var args []string
+	for _, arg := range os.Args {
+		if !strings.HasPrefix(arg, "-") {
+			args = append(args, arg)
+		}
+	}
+
+	switch len(args) {
 	case 3:
 		// dir, option
-		option = os.Args[2]
+		option = args[2]
 		fallthrough
 	case 2:
 		// dir
-		dir = os.Args[1]
+		dir = args[1]
 	default:
 		// unknown args
 		writeError("Expected 1 or 2 arguments.")
@@ -111,8 +138,31 @@ func main() {
 	} else {
 
 		// return the new version
-		fmt.Print(newV.String())
+		fmt.Print(versionString(newV))
 
+		// and a line feed?
+		if !*suppressLinefeed {
+			fmt.Print("\n")
+		}
+
+	}
+
+}
+
+func versionString(v *version.Version) string {
+
+	if *shortFormat {
+		if *includeV {
+			return v.StringShort()
+		} else {
+			return v.StringShortNumber()
+		}
+	}
+
+	if *includeV {
+		return v.String()
+	} else {
+		return v.StringNumber()
 	}
 
 }
@@ -122,11 +172,17 @@ func writeError(message string) {
 	writeHelp()
 }
 func writeHelp() {
-	fmt.Println("USAGE")
-	fmt.Println("  version path [option]")
+	fmt.Println("\n---")
+	fmt.Println("version - by Mat Ryer")
+	fmt.Println("Copyright (c)2014 Stretchr, Inc.  http://www.stretchr.com/")
+	fmt.Println("\nUSAGE")
+	fmt.Println("  version [flags] path [option]")
 	fmt.Println("  path   - Path to set the version for")
 	fmt.Println("  option - none  Read the version")
 	fmt.Println("         - +     Increase the build number (1.0.0 -> 1.0.1)")
 	fmt.Println("         - ++    Increase the minor number (1.0.0 -> 1.1.0)")
 	fmt.Println("         - +++   Increase the major number (1.0.0 -> 2.0.0)")
+	fmt.Println("\nOptional flags:")
+	flag.PrintDefaults()
+	fmt.Println("")
 }

@@ -7,7 +7,27 @@ Perfect for:
   * Automated build/release scripts
   * Integration with GitHub tags
 
-## Download
+### Command line
+
+The `version` command line has the following syntax:
+
+    version [flags] path [option]
+
+  * `flags` - Optionally any flags (see below)
+  * `path` - Path to set the version for.  Use `./` for current directory.
+  * `option`
+    * No option will just read and return the current value and will not change it
+    * `+` Increase the build number (`1.0.0` -> `1.0.1`) and return the new value
+    * `++` Increase the minor number (`1.0.0` -> `1.1.0`) and return the new value
+    * `+++` Increase the major number (`1.0.0` -> `2.0.0`) and return the new value
+
+#### Supported flags
+
+  * `-n` - Suppress the linefeed at the end of the output
+  * `-v=false` - Do not print the v prefix
+  * `-short` - Print the shortest possible representation of the version number, i.e. instead of `v1.0.0`, it will just output `v1`.
+
+### Download
 
 Pick one that matches your machine:
 
@@ -24,19 +44,6 @@ Pick one that matches your machine:
   * Or check out [all releases](https://github.com/stretchr/version/releases)
 
 Place it into your `/usr/bin` directory or equivalent.
-
-### Command line
-
-The `version` command line has the following syntax:
-
-    version path [option]
-
-  * `path` - Path to set the version for.  Use `./` for current directory.
-  * `option`
-    * No option will just read and return the current value and will not change it
-    * `+` Increase the build number (`1.0.0` -> `1.0.1`) and return the new value
-    * `++` Increase the minor number (`1.0.0` -> `1.1.0`) and return the new value
-    * `+++` Increase the major number (`1.0.0` -> `2.0.0`) and return the new value
 
 ### Tips for writing scripts
 
