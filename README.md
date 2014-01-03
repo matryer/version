@@ -7,7 +7,7 @@ Perfect for:
   * Automated build/release scripts
   * Integration with GitHub tags
 
-#### Smart jumping
+#### Smart incrementing
 
 Version increases numbers in a smart way, so if you increase the major version number it will automatically reset the minor and build numbers, like this:
 
