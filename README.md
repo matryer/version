@@ -7,6 +7,21 @@ Perfect for:
   * Automated build/release scripts
   * Integration with GitHub tags
 
+### Download
+
+#### v1.0.0
+
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-386.tar](Version v1.0.0 for darwin 386)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-darwin-amd64.tar](Version v1.0.0 for darwin amd64)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-386.tar](Version v1.0.0 for freebsd 386)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-amd64.tar](Version v1.0.0 for freebsd amd64)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-freebsd-arm.tar](Version v1.0.0 for freebsd arm)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-386.tar](Version v1.0.0 for linux 386)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-amd64.tar](Version v1.0.0 for linux amd64)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-linux-arm.tar](Version v1.0.0 for linux arm)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-386.tar](Version v1.0.0 for windows 386)
+  * [https://github.com/stretchr/version/releases/download/v1.0.0/version-v1.0.0-windows-amd64.tar](Version v1.0.0 for windows amd64)
+
 ### Command line
 
 The `version` command line has the following syntax:
@@ -25,7 +40,7 @@ The `version` command line has the following syntax:
 Use backticks to get the current version and use it in another command:
 
     echo `version ./`
-    
+
 ... or increase the build version at the same time as getting it:
 
     echo `version ./ +`
@@ -33,22 +48,22 @@ Use backticks to get the current version and use it in another command:
 To use the version multiple times, use variables:
 
     VERSION=`version ./ +`; echo $VERSION; echo $VERSION; echo $VERSION
-    
+
 #### Releasing in GitHub
 
     # increase the version and keep it in the VERSION variable
     VERSION=`version ./ +`
-    
+
     # Tag the new release
     git tag -a `echo $VERSION` -m "Release $VERSION"
-    
+
     # Commit the new .version file, since it's changed
     git commit .version -m "Updated version"
-    
+
     # push changes and tags
     git push origin master
     git push --tags
-    
+
 The above script will increase the build number, tag the repo with that version, commit the updated `.version` file and push it to the server.  Remember, you can do it in one line using a semi-colon `;` separator like this;
 
     VERSION=`version ./ +`; git tag -a `echo $VERSION` -m "Release $VERSION"; git commit .version -m "Updated version"; git push origin master; git push --tags
