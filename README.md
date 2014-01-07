@@ -1,6 +1,6 @@
 # Version
 
-Command line tool (and [Go package](#development)) for keeping track of the [Semantic versions (v2.0.0)](http://semver.org/spec/v2.0.0.html) of projects or directories.  Version creates and maintains a `.version` file in the directory containing the current version number, and provides a command line tool to easily get, and update the version number.
+Command line tool (and [Go package](#development)) for keeping track of the versions of projects or directories.  Version creates and maintains a `.version` file in the directory containing the current version number, and provides a command line tool to easily get, and update the version number.
 
 Perfect for:
 
