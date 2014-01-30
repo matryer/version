@@ -108,6 +108,8 @@ func TestString(t *testing.T) {
 func TestStringShort(t *testing.T) {
 
 	assert.Equal(t, (&Version{Major: 1, Minor: 2, Build: 3}).StringShort(), "v1.2.3")
+	assert.Equal(t, (&Version{Major: 1, Minor: 0, Build: 3}).StringShort(), "v1.0.3")
+	assert.Equal(t, (&Version{Major: 0, Minor: 0, Build: 3}).StringShort(), "v0.0.3")
 	assert.Equal(t, (&Version{Major: 1, Minor: 2}).StringShort(), "v1.2")
 	assert.Equal(t, (&Version{Major: 1}).StringShort(), "v1")
 	assert.Equal(t, (&Version{}).StringShort(), "v0")

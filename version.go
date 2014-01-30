@@ -131,7 +131,7 @@ func (v *Version) StringNumber() string {
 func (v *Version) StringShortNumber() string {
 	segs := make([]string, 1, 3)
 	segs[0] = fmt.Sprintf("%d", v.Major)
-	if v.Minor > 0 {
+	if v.Minor > 0 || v.Build > 0 {
 		segs = append(segs, fmt.Sprintf("%d", v.Minor))
 	}
 	if v.Build > 0 {
