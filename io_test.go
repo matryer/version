@@ -1,8 +1,9 @@
 package version
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestHasVersion(t *testing.T) {
@@ -11,7 +12,7 @@ func TestHasVersion(t *testing.T) {
 	var err error
 
 	has, err = HasVersion("tests/none")
-	assert.NoError(t, err)
+	assert.Error(t, err)
 	assert.False(t, has)
 
 	has, err = HasVersion("tests/version_one")
@@ -29,9 +30,7 @@ func TestLoadVersion(t *testing.T) {
 	assert.Error(t, err)
 
 	v, err = LoadVersion("tests/none")
-	if assert.NoError(t, err) {
-		assert.Equal(t, "v0.0.0", v.String())
-	}
+	assert.Error(t, err)
 
 	v, err = LoadVersion("tests/version_one")
 	if assert.NoError(t, err) {

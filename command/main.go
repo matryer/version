@@ -3,10 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/stretchr/version"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/matryer/version"
 )
 
 /*
@@ -45,6 +46,7 @@ import (
 */
 
 const (
+	// ExitCodeBadArgs is the exit code when arguments are bad.
 	ExitCodeBadArgs = 1
 )
 
@@ -135,16 +137,14 @@ func main() {
 		writeError(fmt.Sprintf("Failed to update version: %s", err))
 		os.Exit(ExitCodeBadArgs)
 		return
-	} else {
+	}
 
-		// return the new version
-		fmt.Print(versionString(newV))
+	// return the new version
+	fmt.Print(versionString(newV))
 
-		// and a line feed?
-		if !*suppressLinefeed {
-			fmt.Print("\n")
-		}
-
+	// and a line feed?
+	if !*suppressLinefeed {
+		fmt.Print("\n")
 	}
 
 }
@@ -154,16 +154,14 @@ func versionString(v *version.Version) string {
 	if *shortFormat {
 		if *includeV {
 			return v.StringShort()
-		} else {
-			return v.StringShortNumber()
 		}
+		return v.StringShortNumber()
 	}
 
 	if *includeV {
 		return v.String()
-	} else {
-		return v.StringNumber()
 	}
+	return v.StringNumber()
 
 }
 

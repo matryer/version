@@ -126,7 +126,7 @@ func (v *Version) StringNumber() string {
 	}, versionLevelSeparator)
 }
 
-// StringNumber gets the short string representing this version
+// StringShortNumber gets the short string representing this version
 // without the prefix.  E.g. v1.1.0 becomes 1.1
 func (v *Version) StringShortNumber() string {
 	segs := make([]string, 1, 3)
