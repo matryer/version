@@ -118,7 +118,7 @@ Version is a Go package that you are welcome to use in your own projects.
 
 To get started, go get the package:
 
-    go get github.com/stretchr/version
+    go get github.com/matryer/version
 
 Then you may use the `version.Version` object in your own programs.
 
